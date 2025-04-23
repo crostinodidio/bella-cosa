@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BELLA-COSA | Crostinodidio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
     * {
       margin: 0;
@@ -83,6 +82,23 @@
     .hero p {
       font-size: 1.2rem;
       color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      background: #0ff;
+      color: #000;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background: #00cccc;
     }
 
     .glass {
@@ -121,36 +137,6 @@
       transform: scale(1.05);
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      background-color: #222;
-      color: #fff;
-    }
-
-    button {
-      background: #0ff;
-      color: #000;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #00cccc;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -166,48 +152,16 @@
   <nav>
     <h1>👾 BELLA-COSA</h1>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Progetti</a></li>
-      <li><a href="#contact">Contatti</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Progetti</a></li>
+      <li><a href="contact.html">Contatti</a></li>
     </ul>
   </nav>
 
   <section class="hero">
     <h2>Crostinodidio</h2>
     <p>Creatore di Esperienze Digitali del Futuro</p>
-  </section>
-
-  <section id="about" class="glass">
-    <h2>Chi Sono</h2>
-    <p>Uno sviluppatore con la mente nel metaverso e il cuore nel codice. Creo interfacce che si sentono vive.</p>
-  </section>
-
-  <section id="projects">
-    <h2 style="text-align: center; margin: 40px 0 20px 0;">Progetti</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>🧠 Neural Visor</h3>
-        <p>UI per visori neurali nel cyberspazio.</p>
-      </div>
-      <div class="card">
-        <h3>🌌 StarMap AI</h3>
-        <p>Mappa interattiva galattica basata su AI.</p>
-      </div>
-      <div class="card">
-        <h3>🚀 Quantum Dash</h3>
-        <p>Interfaccia di comando per navi spaziali virtuali.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="glass">
-    <h2>Contattami</h2>
-    <form>
-      <input type="text" placeholder="Il tuo nome" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Messaggio" required></textarea>
-      <button type="submit">Invia</button>
-    </form>
+    <a href="about.html"><button>🎮 Inizia il Tour</button></a>
   </section>
 
   <footer>
