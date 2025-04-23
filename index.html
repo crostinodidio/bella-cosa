@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Futuristico</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Chi Sono</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="hero">
+    <nav>
+      <h1 class="logo">👾 DevFuturista</h1>
+      <ul>
+        <li><a href="#about">Chi Sono</a></li>
+        <li><a href="#projects">Progetti</a></li>
+        <li><a href="#contact">Contatto</a></li>
+      </ul>
+    </nav>
 
-    <section id="home">
-        <div class="hero">
-            <h1>Benvenuto nel mio Portfolio</h1>
-            <p>Designer & Sviluppatore Web</p>
-            <a href="#portfolio" class="btn">Scopri il mio lavoro</a>
+    <div class="hero-content">
+      <h2>Ciao, sono <span>un Creatore del Futuro</span></h2>
+      <p>Creo esperienze digitali moderne, interattive e belle da vedere.</p>
+      <a href="#projects" class="btn">Esplora il mio universo</a>
+    </div>
+  </div>
+
+  <section id="about" class="glass-section">
+    <h2>Chi Sono</h2>
+    <p>Sviluppatore web con una passione per il design futuristico e le interfacce interattive. Combino estetica e funzionalità per creare magie online.</p>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h2>I Miei Progetti</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="card-glass">
+          <h3>🌌 Progetto Galattico</h3>
+          <p>Un'esperienza immersiva costruita in 3D.</p>
         </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Chi Sono</h2>
-            <p>Sono un appassionato di design e sviluppo web. Mi piace creare esperienze uniche per gli utenti e amo risolvere problemi attraverso il codice.</p>
+      </div>
+      <div class="project-card">
+        <div class="card-glass">
+          <h3>🧠 AI Dashboard</h3>
+          <p>Interfaccia per gestire intelligenze artificiali. Minimal e futuristica.</p>
         </div>
-    </section>
-
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Il Mio Lavoro</h2>
-            <div class="portfolio-gallery">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300" alt="Progetto 1">
-                    <h3>Progetto 1</h3>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300" alt="Progetto 2">
-                    <h3>Progetto 2</h3>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300" alt="Progetto 3">
-                    <h3>Progetto 3</h3>
-                </div>
-            </div>
+      </div>
+      <div class="project-card">
+        <div class="card-glass">
+          <h3>🛸 Landing Interstellare</h3>
+          <p>Una landing page che ti porta in orbita. Animazioni a manetta.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contattami</h2>
-            <form action="#" method="POST">
-                <input type="text" placeholder="Il tuo nome" required>
-                <input type="email" placeholder="La tua email" required>
-                <textarea placeholder="Messaggio" required></textarea>
-                <button type="submit">Invia</button>
-            </form>
-        </div>
-    </section>
+  <section id="contact" class="glass-section">
+    <h2>Contattami</h2>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Il tuo messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Il Mio Portfolio</p>
-    </footer>
-
+  <footer>
+    <p>👽 Fatto con codice e caffè | &copy; 2025</p>
+  </footer>
 </body>
 </html>
