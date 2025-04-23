@@ -1,70 +1,264 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio Futuristico</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BELLA-COSA | Crostinodidio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      background: #0c0c0c;
+      overflow-x: hidden;
+    }
+
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      background: linear-gradient(to right, #00f0ff, #ff00e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #0ff;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      margin: 60px auto;
+      padding: 40px;
+      width: 80%;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+    }
+
+    .glass h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 40px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    button {
+      background: #0ff;
+      color: #000;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00cccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <nav>
-      <h1 class="logo">👾 DevFuturista</h1>
-      <ul>
-        <li><a href="#about">Chi Sono</a></li>
-        <li><a href="#projects">Progetti</a></li>
-        <li><a href="#contact">Contatto</a></li>
-      </ul>
-    </nav>
+  <canvas id="bg"></canvas>
 
-    <div class="hero-content">
-      <h2>Ciao, sono <span>un Creatore del Futuro</span></h2>
-      <p>Creo esperienze digitali moderne, interattive e belle da vedere.</p>
-      <a href="#projects" class="btn">Esplora il mio universo</a>
-    </div>
-  </div>
+  <nav>
+    <h1>👾 BELLA-COSA</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Progetti</a></li>
+      <li><a href="#contact">Contatti</a></li>
+    </ul>
+  </nav>
 
-  <section id="about" class="glass-section">
+  <section class="hero">
+    <h2>Crostinodidio</h2>
+    <p>Creatore di Esperienze Digitali del Futuro</p>
+  </section>
+
+  <section id="about" class="glass">
     <h2>Chi Sono</h2>
-    <p>Sviluppatore web con una passione per il design futuristico e le interfacce interattive. Combino estetica e funzionalità per creare magie online.</p>
+    <p>Uno sviluppatore con la mente nel metaverso e il cuore nel codice. Creo interfacce che si sentono vive.</p>
   </section>
 
-  <section id="projects" class="projects-section">
-    <h2>I Miei Progetti</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="card-glass">
-          <h3>🌌 Progetto Galattico</h3>
-          <p>Un'esperienza immersiva costruita in 3D.</p>
-        </div>
+  <section id="projects">
+    <h2 style="text-align: center; margin: 40px 0 20px 0;">Progetti</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🧠 Neural Visor</h3>
+        <p>UI per visori neurali nel cyberspazio.</p>
       </div>
-      <div class="project-card">
-        <div class="card-glass">
-          <h3>🧠 AI Dashboard</h3>
-          <p>Interfaccia per gestire intelligenze artificiali. Minimal e futuristica.</p>
-        </div>
+      <div class="card">
+        <h3>🌌 StarMap AI</h3>
+        <p>Mappa interattiva galattica basata su AI.</p>
       </div>
-      <div class="project-card">
-        <div class="card-glass">
-          <h3>🛸 Landing Interstellare</h3>
-          <p>Una landing page che ti porta in orbita. Animazioni a manetta.</p>
-        </div>
+      <div class="card">
+        <h3>🚀 Quantum Dash</h3>
+        <p>Interfaccia di comando per navi spaziali virtuali.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="glass-section">
+  <section id="contact" class="glass">
     <h2>Contattami</h2>
     <form>
-      <input type="text" placeholder="Nome" required>
+      <input type="text" placeholder="Il tuo nome" required>
       <input type="email" placeholder="Email" required>
-      <textarea placeholder="Il tuo messaggio" required></textarea>
+      <textarea placeholder="Messaggio" required></textarea>
       <button type="submit">Invia</button>
     </form>
   </section>
 
   <footer>
-    <p>👽 Fatto con codice e caffè | &copy; 2025</p>
+    <p>&copy; 2025 Crostinodidio | BELLA-COSA</p>
   </footer>
+
+  <script>
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    function initStars(count = 200) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+        stars.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          z: Math.random() * width
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.fillStyle = '#0c0c0c';
+      ctx.fillRect(0, 0, width, height);
+      for (let i = 0; i < stars.length; i++) {
+        let star = stars[i];
+        star.z -= 2;
+        if (star.z <= 0) star.z = width;
+        let k = 128.0 / star.z;
+        let px = star.x * k + width / 2;
+        let py = star.y * k + height / 2;
+        if (px >= 0 && px < width && py >= 0 && py < height) {
+          let size = (1 - star.z / width) * 3;
+          ctx.fillStyle = '#0ff';
+          ctx.fillRect(px, py, size, size);
+        }
+      }
+      requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      initStars();
+    });
+
+    initStars();
+    animateStars();
+  </script>
 </body>
 </html>
