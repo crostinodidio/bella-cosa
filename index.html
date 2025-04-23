@@ -213,6 +213,26 @@
 
     initStars();
     animateStars();
+
+    // Easter egg: Terminal hacker con SHIFT + T
+    window.addEventListener('keydown', (e) => {
+      if (e.shiftKey && e.key.toLowerCase() === 't') {
+        const term = document.createElement('div');
+        term.style.position = 'fixed';
+        term.style.top = '10%';
+        term.style.left = '50%';
+        term.style.transform = 'translateX(-50%)';
+        term.style.background = '#111';
+        term.style.color = '#0f0';
+        term.style.padding = '30px';
+        term.style.border = '2px solid #0f0';
+        term.style.borderRadius = '10px';
+        term.style.zIndex = 9999;
+        term.innerText = 'ACCESSO TERMINALE FUTURO\n>> Crostinodidio attivato...';
+        document.body.appendChild(term);
+        setTimeout(() => term.remove(), 5000);
+      }
+    });
   </script>
 </body>
 </html>
